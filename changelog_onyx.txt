@@ -1,3 +1,9 @@
+12-06-2026
+
+- Added local updater and OTA update
+- Optimized CPU uclamp behavior with CASS hinting and added NNAPI HAL performance support.
+- Removed obsolete NXP AuthSecret HAL SELinux label to clean up vendor sepolicy.
+
 17-05-2026
 
 - initail unofficial release

@@ -4,12 +4,12 @@
         "maintainer": "k4lchakra",
         "oem": "Xiaomi",
         "device": "POCO F7",
-        "filename": "voltage-5.9-onyx-20260518-1615-GAPPS-UNOFFICIAL.zip",
-        "download": "https://sourceforge.net/projects/voltage-os/files/onyx/voltage-5.9-onyx-20260518-1615-GAPPS-UNOFFICIAL.zip/download",
-        "timestamp": 1779120736,
-        "md5": "e4ffdebcd426d2376fe33a67661f9d87",
-        "size": 3935836015,
-        "version": "5.9"
+        "filename": "voltage-5.10-onyx-20260612-1654-UNOFFICIAL.zip",
+        "download": "https://sourceforge.net/projects/onyx-development/files/voltageos/16/voltage-5.10-onyx-20260612-1654-UNOFFICIAL.zip/download",
+        "timestamp": 1781283118,
+        "md5": "bf0501fc305c3ab6dfebdb6a200cd4d9",
+        "size": 3532024223,
+        "version": "5.10"
     }
   ]
 }
