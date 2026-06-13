@@ -1,0 +1,20 @@
+Voltage ROM flashing instructions for Poco F7 (onyx)
+
+CLEAN FLASH:
+1. Extract recovery images if recovery images is provided on separate zip file
+2. Flash the provided recovery image and vendor boot image via fastboot using "fastboot flash recovery recovery.img" & "fastboot flash vendor_boot vendor_boot.img"
+3. Reboot to recovery using either volume + and power button combo or via fastboot command
+4. Navigate to Apply Update > Apply from ADB
+5. adb sideload the AOSP ROM zip using "adb sideload ROM-*.zip"
+6. Reboot to recovery
+7. Vanilla Build user who want flash gapps using  "adb sideload gapps-*.zip" (optional)
+8. Factory reset/format data
+9. Reboot to system
+
+DIRTY FLASH:
+1. Go to recovery
+2. Navigate to Apply Update > Apply from ADB
+3. adb sideload the AOSP ROM zip using "adb sideload ROM-*.zip"
+4. Reboot to recovery
+5. Vanilla Build user who want flash gapps using  "adb sideload gapps-*.zip" (optional)
+6. Reboot to system
