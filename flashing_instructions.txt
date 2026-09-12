@@ -1,20 +1,45 @@
 Voltage ROM flashing instructions for Poco F7 (onyx)
 
 CLEAN FLASH:
-1. Extract recovery images if recovery images is provided on separate zip file
-2. Flash the provided recovery image and vendor boot image via fastboot using "fastboot flash recovery recovery.img" & "fastboot flash vendor_boot vendor_boot.img"
-3. Reboot to recovery using either volume + and power button combo or via fastboot command
-4. Navigate to Apply Update > Apply from ADB
-5. adb sideload the AOSP ROM zip using "adb sideload ROM-*.zip"
-6. Reboot to recovery
-7. Vanilla Build user who want flash gapps using  "adb sideload gapps-*.zip" (optional)
-8. Factory reset/format data
-9. Reboot to system
+
+1. Download & Extract recovery images if recovery images is provided on separate zip file: boot.img, dtbo.img, init_boot.img, recovery.img, vendor_boot.img
+
+2. Power off the device, and boot it into bootloader mode: with the device powered off, hold Volume Down + Power. Keep holding both buttons until the word “FASTBOOT” appears on the screen, then release.
+
+3. Flash the downloaded image files to your device by typing:
+fastboot flash boot boot.img
+fastboot flash dtbo dtbo.img
+fastboot flash init_boot init_boot.img
+fastboot flash recovery recovery.img
+fastboot flash vendor_boot vendor_boot.img
+
+4. Now reboot into recovery to verify the installation:
+fastboot reboot recovery
+
+5. Navigate to Apply Update > Apply from ADB
+
+6. adb sideload the AOSP ROM zip using
+adb -d sideload /path/to/ROM-*.zip
+
+7. Reboot to recovery
+
+8. Vanilla Build user who want flash gapps using  "adb sideload gapps-*.zip" (optional)
+
+9. Factory reset/format data
+
+10. Reboot to system
+
+
 
 DIRTY FLASH:
+
 1. Go to recovery
-2. Navigate to Apply Update > Apply from ADB
-3. adb sideload the AOSP ROM zip using "adb sideload ROM-*.zip"
+Navigate to Apply Update > Apply from ADB
+adb sideload the AOSP ROM zip using
+adb -d sideload /path/to/ROM-*.zip
+
 4. Reboot to recovery
+
 5. Vanilla Build user who want flash gapps using  "adb sideload gapps-*.zip" (optional)
+
 6. Reboot to system
